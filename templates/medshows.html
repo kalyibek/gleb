@@ -5,7 +5,12 @@
        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-light bg-secondary">
           <h1 class="display-4 font-weight-normal">Обработка медицинских изображений</h1>
           <p class="lead font-weight-normal">INAI.KG</p>
-          <a href="{% url 'medshows_create' %}" class="btn btn-dark">Create medshow</a>
+          <div class="btn-group">
+              <a href="{% url 'medshows_create' %}" class="btn btn-dark">Create medshow</a>
+              <a href="{% url 'parse:med_apartment_list' %}" class="btn btn-dark">Med Apartments</a>
+              <a href="{% url 'parse:parse_func' %}" class="btn btn-dark">Parse</a>
+          </div>
+
        </div>
        <div class="container">
           <div class="row">

@@ -1,0 +1,11 @@
+{% extends 'default.html' %}
+{% block content %}
+{% for i in object_list %}
+    <li>
+    <h2>
+        {{i.name}}
+    </h2>
+        <img src="{{i.image.url}}" alt="">
+    </li>
+{%endfor%}
+{% endblock %}

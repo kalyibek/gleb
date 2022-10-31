@@ -1,8 +1,11 @@
+import os
+
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 from . import models
+from django.conf import settings
 
 
 def redirect(request):
@@ -27,7 +30,7 @@ def create_medshow(request):
     if request.method == 'POST':
         title = request.POST['title']
         description = request.POST['description']
-        images = request.POST['images']
+        images = request.FILES['images']
         medshow_type = request.POST['type']
         timeadd = request.POST['timeadd']
 
@@ -55,7 +58,7 @@ def update_medshow(request, id):
     if request.method == 'POST':
         title = request.POST['title']
         description = request.POST['description']
-        images = request.POST['images']
+        images = request.FILES['images']
         medshow_type = request.POST['type']
         timeadd = request.POST['timeadd']
 
